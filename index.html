@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="words.js"></script>
+        <script src="index.js"></script>
+        <style>
+            body {
+                text-align: center;
+            }
+            table, th, tr, td {
+                border: 1px solid black;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td {
+                width: 100px;
+                height: 100px;
+            }
+            .guess {
+                width: 40px;
+                height: 40px;
+                font-size: 24px;
+                text-align: center;
+            }
+            .yguess {
+                width: 80px;
+                height: 40px;
+                font-size: 16px;
+                text-align: center;
+            }
+            #wordbank {
+                width: 50%;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Green Letters</th>
+                <td>
+                    <input class="guess" type="text" id="1" maxlength="1" />
+                </td>
+                <td>
+                    <input class="guess" type="text" id="2" maxlength="1" />
+                </td>
+                <td>
+                    <input class="guess" type="text" id="3" maxlength="1" />
+                </td>
+                <td>
+                    <input class="guess" type="text" id="4" maxlength="1" />
+                </td>
+                <td>
+                    <input class="guess" type="text" id="5" maxlength="1" />
+                </td>
+            </tr>
+            <tr>
+                <th>Yellow Letters</th>
+                <td>
+                    <input class="yguess" type="text" id="y1" />
+                </td>
+                <td>
+                    <input class="yguess" type="text" id="y2" />
+                </td>
+                <td>
+                    <input class="yguess" type="text" id="y3" />
+                </td>
+                <td>
+                    <input class="yguess" type="text" id="y4" />
+                </td>
+                <td>
+                    <input class="yguess" type="text" id="y5" />
+                </td>
+            </tr>
+        </table>
+        
+        <div>
+            <label>Grey Letters:</label>
+            <input type="text" id="grey" />
+        </div>
+        <button onclick="getLetters()">Submit</button>
+
+        <div>
+            <label id="wordcount"></label><br/>
+            <textarea id="wordbank"></textarea>
+        </div>
+
+    </body>
+</html>
